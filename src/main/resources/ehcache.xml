@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+        <!--cache:每个需要配置的缓存节点-->
+        <!--name:定义的缓存名字，在注解或配置文件中会引用到-->
+        <!--maxElementsInMemory：内存中最大存储缓存的对象个数-->
+        <!--eternal:设定缓存的elements是否永远不过期。如果为true，则缓存的数据始终有效，如果为false那么还要根据timeToIdleSeconds，timeToLiveSeconds判断。-->
+        <!--timeToIdleSeconds: 对象空闲时间，指对象在多长时间没有被访问就会失效-->
+        <!--timeToLiveSeconds: 对象存活时间，指对象从创建到失效所需要的时间-->
+        <!--overflowToDisk:如果内存中数据超过内存限制，是否要缓存到磁盘上-->
+        <!--diskPersistent: 是否在磁盘上持久化。指重启jvm后，数据是否有效。默认为false-->
+        <!--diskExpiryThreadIntervalSeconds:对象检测线程运行时间间隔。标识对象状态的线程多长时间运行一次-->
+        <!--memoryStoreEvictionPolicy:如果内存中数据超过内存限制，向磁盘缓存时的策略。默认值LRU，可选FIFO、LFU-->
+<ehcache>
+    <diskStore path="java.io.tmpdir" />
+    <!--配置默认的缓存区-->
+    <defaultCache
+            maxElementsInMemory="10000"
+            eternal="false"
+            timeToIdleSeconds="120"
+            timeToLiveSeconds="120"
+            maxElementsOnDisk="10000000"
+            diskExpiryThreadIntervalSeconds="120"
+            memoryStoreEvictionPolicy="LRU"/>
+    <!--配置名为users的缓存区，你自己可以改，也可以添加多个-->
+    <cache name="users"
+           maxElementsInMemory="10000"
+           eternal="false"
+           overflowToDisk="true"
+           timeToIdleSeconds="300"
+           timeToLiveSeconds="600"/>
+</ehcache>
