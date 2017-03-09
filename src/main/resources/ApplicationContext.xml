@@ -26,6 +26,7 @@
     <import resource="springPojoDAO.xml"/>
     <import resource="springPojoTool.xml"/>
     <import resource="springPojoVO.xml"/>
+    <!--Ehcache缓存机制-->
     <import resource="springCache.xml"/>
     <import resource="springAOP.xml"/>
 

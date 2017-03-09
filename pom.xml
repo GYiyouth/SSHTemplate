@@ -41,6 +41,8 @@
 
         <javax.servlet.version>4.0.0-b03</javax.servlet.version>
         <net.json.version>2.4</net.json.version>
+        <c3p0.version>0.9.1.2</c3p0.version>
+        <tomcat.classloader.version>2.1.0</tomcat.classloader.version>
     </properties>
 
 
@@ -176,7 +178,7 @@
         <dependency>
             <groupId>c3p0</groupId>
             <artifactId>c3p0</artifactId>
-            <version>0.9.1.2</version>
+            <version>${c3p0.version}</version>
         </dependency>
         <dependency>
             <groupId>javax.servlet</groupId>
@@ -188,7 +190,7 @@
         <dependency>
             <groupId>se.jiderhamn.classloader-leak-prevention</groupId>
             <artifactId>classloader-leak-prevention-servlet</artifactId>
-            <version>2.1.0</version>
+            <version>${tomcat.classloader.version}</version>
         </dependency>
 
         <!--JSON-->
