@@ -4,12 +4,13 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
-
+    <!--Spring根配置文件-->
     <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>classpath*:ApplicationContext.xml</param-value>
     </context-param>
 
+    <!--log4j配置文件-->
     <context-param>
         <param-name>log4jConfigLocation</param-name>
         <param-value>classpath*:log4j.properties</param-value>

@@ -14,10 +14,6 @@
        http://www.springframework.org/schema/context
        http://www.springframework.org/schema/context/spring-context.xsd">
 
-
-
-
-
     <import resource="springAction.xml"/>
     <!--数据库配置好以后，在下面的配置文件中配置一下，然后取消注释-->
     <!--<import resource="springPersistence.xml"/>-->
@@ -26,11 +22,7 @@
     <import resource="springPojoDAO.xml"/>
     <import resource="springPojoTool.xml"/>
     <import resource="springPojoVO.xml"/>
-    <!--Ehcache缓存机制-->
-    <import resource="springCache.xml"/>
+    <!--Ehcache缓存机制，默认关闭-->
+    <!--<import resource="springCache.xml"/>-->
     <import resource="springAOP.xml"/>
-
-
-
-
 </beans>

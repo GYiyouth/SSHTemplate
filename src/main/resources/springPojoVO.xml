@@ -5,4 +5,5 @@
 
     <!--domain层的主要VO们-->
 
+    <bean id="testVO" class="pojo.vo.TestVO"/>
 </beans>
