@@ -14,16 +14,9 @@
        http://www.springframework.org/schema/context
        http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <!--SpringAOP相关配置-->
-    <!--启用@Aspect支持-->
-    <aop:aspectj-autoproxy/>
-    <!--要切的类，包名加在下划线里-->
-    <context:component-scan base-package="aop">
-        <context:include-filter type="annotation" expression="org.aspectj.lang.annotation.Aspect"/>
-    </context:component-scan>
 
-    <!--&lt;!&ndash;缓存机制自动扫描&ndash;&gt;-->
-    <!--<cache:annotation-driven/>-->
+
+
 
     <import resource="springAction.xml"/>
     <!--数据库配置好以后，在下面的配置文件中配置一下，然后取消注释-->
@@ -34,7 +27,7 @@
     <import resource="springPojoTool.xml"/>
     <import resource="springPojoVO.xml"/>
     <import resource="springCache.xml"/>
-
+    <import resource="springAOP.xml"/>
 
 
 
