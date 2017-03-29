@@ -17,6 +17,8 @@
     <bean name = "localSessionFactoryBean" id="sessionFactory"
           class="org.springframework.orm.hibernate5.LocalSessionFactoryBean"
           p:dataSource-ref="dataSource">
+        <!--自动扫描pojo文件夹下带有注解的类-->
+        <property name="packagesToScan" value="pojo"/>
         <!--annotatedClass用来列出所有的持久化类-->
         <property name="annotatedClasses">
             <list>
@@ -32,7 +34,10 @@
                 </prop>
                 <!--是否根据hibernate映射创建数据表-->
                 <prop key="hibernate.hbm2ddl.auto">update</prop>
+                <!--格式化显示SQL语句-->
                 <prop key="hibernate.show_sql">true</prop>
+                <prop key="hibernate.format_sql">true</prop>
+
             </props>
         </property>
         
