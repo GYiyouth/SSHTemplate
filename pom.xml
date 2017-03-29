@@ -2,13 +2,15 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>GeYao</groupId>
-  <artifactId>S2S4H5Template</artifactId>
+  <artifactId>${appName}</artifactId>
   <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>S2S4H5Template Maven Webapp</name>
+  <name>${appName} Maven Webapp</name>
   <url>http://maven.apache.org</url>
 
     <properties>
+        <!--工程名-->
+        <appName>SSHTemplate</appName>
         <!--指定编码与JDK版本-->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -248,7 +250,7 @@
 
     </dependencies>
   <build>
-    <finalName>S2S4H5Template</finalName>
+    <finalName>${appName}</finalName>
 
       <!--<plugins>-->
           <!--<plugin>-->
