@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:task="http://www.springframework.org/schema/task"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.0.xsd
+                           ">
 
-    <!--<bean id="time" class="tool.Time"/>-->
+    <!--开启了注解式计划任务，在一个方法上注释@Scheduled即可-->
+    <task:annotation-driven/>
 
 </beans>
