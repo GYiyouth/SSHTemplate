@@ -39,7 +39,17 @@
                 <prop key="hibernate.format_sql">true</prop>
 
             </props>
-        </property>
-        
+        </property>        
+    </bean>
+       
+    <bean id="hibernateTemplate" class="org.springframework.orm.hibernate5.HibernateTemplate"
+          p:sessionFactory-ref="sessionFactory"/>
+       
+       <!-- 开启注解事务 只对当前配置文件有效 -->
+    <tx:annotation-driven transaction-manager="txManager"/>
+
+
+    <bean id="txManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory"/>
     </bean>
 </beans>
