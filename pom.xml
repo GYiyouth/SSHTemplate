@@ -28,7 +28,7 @@
         <struts2.version>2.5.10</struts2.version>
         <struts2-spring-plugin>2.5.1</struts2-spring-plugin>
         <!--hibernate5版本号-->
-        <hibernate.version>5.2.7.final</hibernate.version>
+        <hibernate.version>5.2.7.Final</hibernate.version>
         <!--MySQL版本号-->
         <mysql.version>5.1.40</mysql.version>
         <!--dom4j版本号-->
